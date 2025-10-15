@@ -7,6 +7,22 @@
 #  "Hakuna matata", "Timon, Pumba and Simba are friends, but Simba could eat the other two."] 
 #
 
+from functools import reduce
+
+def count_simba(sentences):
+    counts = map(lambda s: s.count("Simba"), sentences)
+    total = reduce(lambda a, b: a + b, counts)
+    return total
+sentences = [
+    "Simba and Nala are lions.",
+    "I laugh in the face of danger.",
+    "Hakuna matata",
+    "Timon, Pumba and Simba are friends, but Simba could eat the other two."
+]
+
+print("Count of simba:", count_simba(sentences))  # Output: 3
+
+
 # 2)
 # Create a function called "get_day_month_year" that takes 
 # a list of datetimes.date and returns a pandas dataframe
