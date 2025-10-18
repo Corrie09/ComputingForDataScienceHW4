@@ -14,10 +14,10 @@ def count_simba(sentences):
     total = reduce(lambda a, b: a + b, counts)
     return total
 sentences = [
-    "Simba and Nala are lions.",
-    "I laugh in the face of danger.",
-    "Hakuna matata",
-    "Timon, Pumba and Simba are friends, but Simba could eat the other two."
+    "Simba the lion",
+    "Hello world.",
+    "Simba is brave",
+    "The weather is nice"
 ]
 
 print("Count of simba:", count_simba(sentences))  # Output: 3
@@ -30,6 +30,14 @@ print("Count of simba:", count_simba(sentences))  # Output: 3
 # is an element of the input list and has as value its 
 # day, month, and year.
 # 
+
+import datetime as dt
+import pandas as pd
+
+def get_day_month_year(date_input: dt.date) -> pd.DataFrame:
+    d = pd.to_datetime(date_input)
+    return pd.DataFrame({'day': [d.day], 'month': [d.month], 'year': [d.year]})
+
 
 # 3) 
 # Create a function called "compute_distance" that takes
