@@ -33,7 +33,6 @@ print("Count of simba:", count_simba(sentences))  # Output: 3
 # is an element of the input list and has as value its
 # day, month, and year.
 #
-import datetime
 
 import pandas as pd
 
@@ -44,12 +43,14 @@ def get_day_month_year(dates):
     return df
 
 
+"""
 dates = [
     datetime.date(2020, 5, 17),
     datetime.date(2021, 6, 18),
     datetime.date(2022, 7, 19),
 ]
 print(get_day_month_year(dates))
+"""
 #################################################
 
 # 3)
