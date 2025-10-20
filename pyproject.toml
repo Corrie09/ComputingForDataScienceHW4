@@ -6,6 +6,12 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "geopy>=2.4.1",
+    "matplotlib>=3.10.7",
     "pandas>=2.3.3",
     "scikit-learn>=1.7.2",
+]
+
+[tool.uv.workspace]
+members = [
+    "diabetes_project",
 ]
