@@ -38,6 +38,10 @@ print("Count of simba:", count_simba(sentences))  # Output: 3
 # example input: [((41.23,23.5), (41.5, 23.4)), ((52.38, 20.1),(52.3, 17.8))]
 # HINT: You can use geopy.distance in order to compute the distance
 #
+from geopy.distance import distance
+
+def compute_distance(coords):
+    return list(map(lambda pair: distance(pair[0], pair[1]).km, coords))
 
 #################################################
 # 4)
@@ -50,5 +54,13 @@ print("Count of simba:", count_simba(sentences))  # Output: 3
 # for instance for list_1=[[2], 3, [[1,2],5]] 
 # the result should be 13
 #
+def sum_general_int_list(lst):
+    total = 0
+    for item in lst:
+        if isinstance(item, int):
+            total += item
+        elif isinstance(item, list):
+            total += sum_general_int_list(item)
+    return total
 
 
