@@ -43,11 +43,12 @@ def get_day_month_year(dates):
     return df
 
 
-"""
+""" 
+import datetime as dt
 dates = [
-    datetime.date(2020, 5, 17),
-    datetime.date(2021, 6, 18),
-    datetime.date(2022, 7, 19),
+    dt.date(2020, 5, 17),
+    dt.date(2021, 6, 18),
+    dt.date(2022, 7, 19),
 ]
 print(get_day_month_year(dates))
 """
