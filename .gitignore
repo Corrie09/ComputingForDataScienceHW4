@@ -208,3 +208,6 @@ __marimo__/
 
 diabetes_project/data/*
 !diabetes_project/data/.gitkeep
+
+# macOS system files
+.DS_Store
