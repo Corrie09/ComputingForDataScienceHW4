@@ -15,7 +15,7 @@ def count_simba(sentences):
     total = reduce(lambda a, b: a + b, counts)
     return total
 
-
+"""
 sentences = [
     "Simba and Nala are lions.",
     "I laugh in the face of danger.",
@@ -24,7 +24,7 @@ sentences = [
 ]
 
 print("Count of simba:", count_simba(sentences))  # Output: 3
-
+"""
 
 # 2)
 # Create a function called "get_day_month_year" that takes
@@ -67,6 +67,10 @@ from geopy.distance import distance
 def compute_distance(coords):
     return list(map(lambda pair: distance(pair[0], pair[1]).km, coords))
 
+"""
+example_coords = [((41.23, 23.5), (41.5, 23.4)), ((52.38, 20.1), (52.3, 17.8))]
+print(compute_distance(example_coords))
+"""   
 
 #################################################
 # 4)
@@ -87,3 +91,10 @@ def sum_general_int_list(lst):
         elif isinstance(item, list):
             total += sum_general_int_list(item)
     return total
+
+"""
+example_list = [[2], 4, 5, [1, [2], [3, 5, [7, 8]]], 1]
+print("Sum of general int list:", sum_general_int_list(example_list)) 
+example_list_2 = [[2], 3, [[1, 2], 5]]
+print("Sum of general int list 1:", sum_general_int_list(example_list_2)) 
+"""
